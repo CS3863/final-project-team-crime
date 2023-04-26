@@ -63,11 +63,13 @@ public class SimControlerScripts : MonoBehaviour
     public ShowingOnScreen OnScreen;
     public UseData Data;
     public GameObject blackOutSquare;
-    public Animation sun;
+    public GameObject sun;
+    public Animation anim;
  
     void Awake()
     {
-        sun = GameObject.Find("Sun").GetComponent<Animation>(); //find the Sun game object animation 
+        sun = GameObject.Find("Sun"); //
+        anim = sun.GetComponent<Animator>(); //find the Sun game object animation 
     }
 
 
