@@ -63,7 +63,14 @@ public class SimControlerScripts : MonoBehaviour
     public ShowingOnScreen OnScreen;
     public UseData Data;
     public GameObject blackOutSquare;
+    public Animation sun;
  
+    void Awake()
+    {
+        sun = GameObject.Find("Sun").GetComponent<Animator>(); //find the Sun game object animation 
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,6 +95,7 @@ public class SimControlerScripts : MonoBehaviour
             OnScreen.Setyear((i + 1985).ToString());
             OnScreen.SetLoc("United States");
             OnScreen.SetCrime(Data.Getdata(i, "United_States"));
+            sun.Play();
          
            
         }
@@ -96,12 +104,14 @@ public class SimControlerScripts : MonoBehaviour
             OnScreen.Setyear((i + 1985).ToString());
             OnScreen.SetLoc("Oklahoma");
             OnScreen.SetCrime(Data.Getdata(i, "Oklahoma"));
+            sun.Play();
         }
         else if (z == 2)
         {
             OnScreen.Setyear((i + 1985).ToString());
             OnScreen.SetLoc("Tulsa");
             OnScreen.SetCrime(Data.Getdata(i, "Tulsa"));
+            sun.Play();
         }
         else
         {
