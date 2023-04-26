@@ -11,6 +11,7 @@ public class ShowingOnScreen : MonoBehaviour
     string year;
     string loc;
     string crime;
+<<<<<<< Updated upstream
 
    /* ShowingYears(String Text)
     {
@@ -22,6 +23,11 @@ public class ShowingOnScreen : MonoBehaviour
     public TMP_Text canvasText;
  
    
+=======
+    
+    public TMP_Text canvasText;
+
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
