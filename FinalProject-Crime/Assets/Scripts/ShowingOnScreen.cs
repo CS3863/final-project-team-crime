@@ -11,23 +11,9 @@ public class ShowingOnScreen : MonoBehaviour
     string year;
     string loc;
     string crime;
-<<<<<<< Updated upstream
 
-   /* ShowingYears(String Text)
-    {
-        canvasText.text = Text;
-
-    }*/
-  
-   
-    public TMP_Text canvasText;
- 
-   
-=======
-    
     public TMP_Text canvasText;
 
->>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +23,7 @@ public class ShowingOnScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        canvasText.text = year + " " + loc + " Crime rate per 100,000 people: " + crime;
+        canvasText.text = year + " \n" + loc + "\nCrime rate per 100,000 people: " + crime;
     }
 
     internal void Setyear(string year)
