@@ -1,17 +1,23 @@
 fileFormatVersion: 2
-guid: 872eb50d4a2325e47b254756051a96ab
+guid: f7c22b65cf80a6f46a1f623a9b6aff9a
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: -773793030345712636
-    second: SailboatS
+      74: -6425801362772139968
+    second: CruiseShipS
   - first:
-      74: 8469943238850267901
-    second: SaibloatM
+      74: -5701717311390958966
+    second: CruiseShip.001|Sailboat.001Action
   - first:
-      74: -7262787057272891935
-    second: SailboatL
+      74: 628677787945804144
+    second: CruiseShip.001|Sailboat.002|Sailboat.001|Sailboat.001Action
+  - first:
+      74: -1154524673279519885
+    second: CruiseShipM
+  - first:
+      74: 6496009405521651594
+    second: CruiseShipL
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -42,8 +48,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: SailboatS
-      takeName: Sailboat.001|Sailboat.001Action
+      name: CruiseShipS
+      takeName: CruiseShip.001|CruiseShip.001Action
       internalID: 0
       firstFrame: 0
       lastFrame: 1300
@@ -71,8 +77,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SaibloatM
-      takeName: Sailboat.001|Sailboat.001Action
+      name: CruiseShipM
+      takeName: CruiseShip.001|CruiseShip.001Action
       internalID: 0
       firstFrame: 1301
       lastFrame: 2600
@@ -100,8 +106,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SailboatL
-      takeName: Sailboat.001|Sailboat.001Action
+      name: CruiseShipL
+      takeName: CruiseShip.001|CruiseShip.001Action
       internalID: 0
       firstFrame: 2601
       lastFrame: 3900
