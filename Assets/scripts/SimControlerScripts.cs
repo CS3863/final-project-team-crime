@@ -29,8 +29,15 @@ public class SimControlerScripts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //  Sailboatanom = Sailboat.GetComponent<Animator>();
+        //  Sailboatanom = Sailboat.GetComponent<Animator>();
         //Data = GameObject.Find("UseDataObject");
+        oceanAnimator.Play("OceanWaves", 0, 0f);
+        sailboatAnimator.Play("Sailboat", 0, 0f);
+        yachtAnimator.Play("Yacht", 0, 0f);
+        shipAnimator.Play("CruiseShip", 0, 0f);
+        sailboatGO.SetActive(true);
+        yachtGO.SetActive(false);
+        shipGO.SetActive(false);
         InvokeRepeating("loopFiltering", startdelay, timeinterval);
 
     }
@@ -44,32 +51,46 @@ public class SimControlerScripts : MonoBehaviour
             i = 0;
             z++;
             StartCoroutine(FadeBlackOutSquare());
+
             oceanAnimator.Play("OceanWaves", 0, 0f);
-            sailboatAnimator.Play("Sailboat", 0, 0f);
-            yachtAnimator.Play("Yacht", 0, 0f);
-            shipAnimator.Play("CruiseShip", 0, 0f);
+            if (z == 0)
+            {
+                sailboatGO.SetActive(true);
+                yachtGO.SetActive(false);
+                shipGO.SetActive(false);
+                sailboatAnimator.Play("Sailboat", 0, 0f);
+            }
+            if (z == 1)
+            {
+                sailboatGO.SetActive(false);
+                yachtGO.SetActive(true);
+                shipGO.SetActive(false);
+                yachtAnimator.Play("Yacht", 0, 0f);
+            }
+            if (z == 2)
+            {
+                sailboatGO.SetActive(false);
+                yachtGO.SetActive(false);
+                shipGO.SetActive(true);
+                shipAnimator.Play("CruiseShip", 0, 0f);
+            }
+
         }
       
         if (z == 0)
         { 
-            sailboatGO.SetActive(true);
-            yachtGO.SetActive(false);
-            shipGO.SetActive(false);
             OnScreen.Setyear((i + 1985).ToString());
             OnScreen.SetLoc("Tulsa");
             float v1 = sailboatAnimator.GetFloat("Sail");
             OnScreen.SetCrime(Data.Getdata(i, "Tulsa"));
             float v2 = float.Parse(Data.Getdata(i, "TulsaConverted"));
-
             //Converted = float.Parse(Data.Getdata(i, "TulsaConverted"));
             //Debug.Log("The TulsaConverted is: " + Converted);
             StartCoroutine(ChangeVal(v1, v2, timeinterval));
         }
+
         else if (z == 1)
         {
-            sailboatGO.SetActive(false);
-            yachtGO.SetActive(true);
-            shipGO.SetActive(false);
             OnScreen.Setyear((i + 1985).ToString());
             OnScreen.SetLoc("Oklahoma");
             float v1 = yachtAnimator.GetFloat("Yacht");
@@ -81,11 +102,9 @@ public class SimControlerScripts : MonoBehaviour
 
             StartCoroutine(ChangeVal(v1, v2, timeinterval));
         }
+
         else if (z == 2)
         {
-            sailboatGO.SetActive(false);
-            yachtGO.SetActive(false);
-            shipGO.SetActive(true);
             OnScreen.Setyear((i + 1985).ToString());
             OnScreen.SetLoc("United States");
             float v1 = shipAnimator.GetFloat("Cruise");
@@ -96,6 +115,7 @@ public class SimControlerScripts : MonoBehaviour
 
             StartCoroutine(ChangeVal(v1, v2, timeinterval));
         }
+
         else
         {
             i = 0;
@@ -136,6 +156,8 @@ public class SimControlerScripts : MonoBehaviour
                 yield return null;
                 yachtAnimator.SetFloat("Yacht", Converted);
                 oceanAnimator.SetFloat("Wave", Converted);
+                Debug.Log("Yacht: " + yachtAnimator.GetFloat("Yacht"));
+                Debug.Log("Wave: " + oceanAnimator.GetFloat("Wave"));
             }
             Debug.Log(Converted);
             Converted = end;
@@ -160,7 +182,7 @@ public class SimControlerScripts : MonoBehaviour
         }
     }
 
-    public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 15)
+    public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, float fadeSpeed = 1.0f)
     {
         Color objectColor = blackOutSquare.GetComponent<Image>().color;
         float fadeAmount;
@@ -174,11 +196,14 @@ public class SimControlerScripts : MonoBehaviour
                 objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
                 blackOutSquare.GetComponent<Image>().color = objectColor;
                 yield return null;
-
             }
+
         }
+
         else
         {
+
+
             while (blackOutSquare.GetComponent<Image>().color.a > 0)
             {
                 fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
