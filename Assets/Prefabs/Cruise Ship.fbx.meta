@@ -2,22 +2,7 @@ fileFormatVersion: 2
 guid: f7c22b65cf80a6f46a1f623a9b6aff9a
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable:
-  - first:
-      74: -6425801362772139968
-    second: CruiseShipS
-  - first:
-      74: -5701717311390958966
-    second: CruiseShip.001|Sailboat.001Action
-  - first:
-      74: 628677787945804144
-    second: CruiseShip.001|Sailboat.002|Sailboat.001|Sailboat.001Action
-  - first:
-      74: -1154524673279519885
-    second: CruiseShipM
-  - first:
-      74: 6496009405521651594
-    second: CruiseShipL
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -48,9 +33,9 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: CruiseShipS
-      takeName: CruiseShip.001|CruiseShip.001Action
-      internalID: 0
+      name: CruiseS
+      takeName: CruiseShip.002|CruiseShip.002|CruiseShip.001|CruiseShip.001Action
+      internalID: -5970359415295608399
       firstFrame: 0
       lastFrame: 1300
       wrapMode: 0
@@ -77,9 +62,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: CruiseShipM
-      takeName: CruiseShip.001|CruiseShip.001Action
-      internalID: 0
+      name: CruiseM
+      takeName: CruiseShip.002|CruiseShip.002|CruiseShip.001|CruiseShip.001Action
+      internalID: 7524954559254198518
       firstFrame: 1301
       lastFrame: 2600
       wrapMode: 0
@@ -106,9 +91,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: CruiseShipL
-      takeName: CruiseShip.001|CruiseShip.001Action
-      internalID: 0
+      name: CruiseL
+      takeName: CruiseShip.002|CruiseShip.002|CruiseShip.001|CruiseShip.001Action
+      internalID: 7772674506907842272
       firstFrame: 2601
       lastFrame: 3900
       wrapMode: 0

@@ -2,22 +2,7 @@ fileFormatVersion: 2
 guid: 2ffe1e03ab6af774f86bc1b9ffa66019
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable:
-  - first:
-      74: 1252251900346764646
-    second: YachtM
-  - first:
-      74: 8190942208371556074
-    second: Yacht.001|Sailboat.001Action
-  - first:
-      74: 2187295388535085599
-    second: Yacht.001|Sailboat.002|Sailboat.001|Sailboat.001Action
-  - first:
-      74: -7457165657818649556
-    second: YachtS
-  - first:
-      74: -4202343408891674522
-    second: YachtL
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -50,7 +35,7 @@ ModelImporter:
     - serializedVersion: 16
       name: YachtS
       takeName: Yacht.001|Yacht.001Action
-      internalID: 0
+      internalID: 517349090950824872
       firstFrame: 0
       lastFrame: 1300
       wrapMode: 0
@@ -78,10 +63,10 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: YachtM
-      takeName: Yacht.001|CruiseShip.001Action
-      internalID: 0
-      firstFrame: 1301
-      lastFrame: 2600
+      takeName: Yacht.001|Yacht.001Action
+      internalID: 6497147138248297121
+      firstFrame: 0
+      lastFrame: 3900
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -107,9 +92,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: YachtL
-      takeName: Yacht.001|CruiseShip.001Action
-      internalID: 0
-      firstFrame: 2601
+      takeName: Yacht.001|Yacht.001Action
+      internalID: -6941490193512697340
+      firstFrame: 0
       lastFrame: 3900
       wrapMode: 0
       orientationOffsetY: 0
